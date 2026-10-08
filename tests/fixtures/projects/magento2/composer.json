@@ -1,0 +1,7 @@
+{
+    "name": "magento/project-community-edition",
+    "type": "project",
+    "require": {
+        "magento/product-community-edition": "2.4.7"
+    }
+}

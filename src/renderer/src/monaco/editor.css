@@ -1,0 +1,100 @@
+/*
+ * Editor decorations (theme tokens only — the --tw-* variables come from the active theme).
+ * Injected text spans are rendered inside Monaco's view lines; they use em-based sizes so they follow the zoom.
+ */
+
+/* Magic comment badge: [label][value][×N] rendered as one rounded pill made of up to three injected spans. */
+.monaco-editor .tw-magic {
+  font-size: 0.84em;
+  padding: 0.1em 0.38em;
+  background-color: color-mix(in srgb, var(--tw-accent) 12%, transparent);
+  color: var(--tw-text-muted);
+  font-style: normal;
+  white-space: pre;
+}
+
+.monaco-editor .tw-magic-first {
+  margin-left: 1.6ch;
+  padding-left: 0.75em;
+  border-top-left-radius: 999px;
+  border-bottom-left-radius: 999px;
+}
+
+.monaco-editor .tw-magic-last {
+  padding-right: 0.75em;
+  border-top-right-radius: 999px;
+  border-bottom-right-radius: 999px;
+}
+
+.monaco-editor .tw-magic-inline.tw-magic-first {
+  margin-left: 0.5ch;
+}
+
+.monaco-editor .tw-magic-inline.tw-magic-last {
+  margin-right: 0.5ch;
+}
+
+.monaco-editor .tw-magic-label {
+  font-style: italic;
+  opacity: 0.9;
+}
+
+.monaco-editor .tw-magic-value {
+  color: var(--tw-accent);
+  font-weight: 600;
+}
+
+.monaco-editor .tw-magic-time {
+  font-variant-numeric: tabular-nums;
+}
+
+.monaco-editor .tw-magic-hits {
+  font-size: 0.74em;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+/* Coverage: a small square in the lines-decorations lane of every executed line. */
+.monaco-editor .tw-coverage::after {
+  content: '';
+  position: absolute;
+  left: 4px;
+  top: 50%;
+  width: 6px;
+  height: 6px;
+  margin-top: -3px;
+  border-radius: 1.5px;
+  background-color: var(--tw-success);
+  opacity: 0.8;
+}
+
+/* Inline errors */
+.monaco-editor .tw-inline-error {
+  margin-left: 2.5ch;
+  color: var(--tw-danger);
+  font-size: 0.9em;
+  font-style: italic;
+  white-space: pre;
+}
+
+.monaco-editor .tw-error-line {
+  background-color: color-mix(in srgb, var(--tw-danger) 7%, transparent);
+}
+
+/* Vim status (moved into the footer slot) */
+.tw-vim-status {
+  display: flex;
+  align-items: center;
+  gap: 0.6em;
+  white-space: pre;
+  font-family: var(--font-mono, ui-monospace, monospace);
+}
+
+.tw-vim-status input {
+  min-width: 12ch;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+}

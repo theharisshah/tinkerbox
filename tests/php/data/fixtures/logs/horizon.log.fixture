@@ -1,0 +1,7 @@
+  2024-05-01 12:00:00 App\Jobs\SendWelcomeEmail ........................ RUNNING
+  2024-05-01 12:00:01 App\Jobs\SendWelcomeEmail ................... 812.04ms DONE
+  2024-05-01 12:00:02 App\Jobs\ImportCsv ............................... RUNNING
+  2024-05-01 12:00:05 App\Jobs\ImportCsv ............................ 3s FAIL
+[2023-04-01 10:00:00][Xy12Ab] Processing: App\Jobs\LegacyJob
+[2023-04-01 10:00:01][Xy12Ab] Failed:     App\Jobs\LegacyJob
+Horizon started successfully.

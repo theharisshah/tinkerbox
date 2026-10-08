@@ -1,0 +1,31 @@
+[2024-05-01 12:00:00] local.INFO: User logged in {"user_id":1,"ip":"127.0.0.1"} 
+[2024-05-01 12:00:01] local.DEBUG: Multi-line message
+second line of the message
+third line {"step":3}
+[2024-05-01 12:00:02] production.ERROR: Call to undefined method App\Models\User::foo() {"userId":7,"exception":"[object] (BadMethodCallException(code: 0): Call to undefined method App\\Models\\User::foo() at /var/www/app/vendor/laravel/framework/src/Illuminate/Support/Traits/ForwardsCalls.php:67)
+[stacktrace]
+#0 /var/www/app/vendor/laravel/framework/src/Illuminate/Support/Traits/ForwardsCalls.php(36): Illuminate\\Database\\Eloquent\\Model::throwBadMethodCallException('foo')
+#1 /var/www/app/app/Http/Controllers/HomeController.php(12): Illuminate\\Database\\Eloquent\\Model->forwardCallTo(Object(Illuminate\\Database\\Eloquent\\Builder), 'foo', Array)
+#2 {main}
+"} 
+[2024-05-01T12:00:03.123456+02:00] local.WARNING: Payment {provider} slow [] []
+[2024-05-01T12:00:04.5Z] testing.CRITICAL: Queue failed with nested {"job":{"id":"abc","attempts":3}} {"memory":"12MB"}
+[2024-05-01 12:00:05] local.ERROR: Outer failure {"exception":"[object] (RuntimeException(code: 0): Outer failure at /var/www/app/app/Jobs/Sync.php:20)
+[stacktrace]
+#0 /var/www/app/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): App\\Jobs\\Sync->handle()
+#1 {main}
+
+[previous exception] [object] (PDOException(code: HY000): SQLSTATE[HY000] [2002] Connection refused at /var/www/app/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php:65)
+[stacktrace]
+#0 /var/www/app/vendor/laravel/framework/src/Illuminate/Database/Connectors/Connector.php(65): PDO->__construct('mysql:host=127....', 'root', Object(SensitiveParameterValue), Array)
+#1 {main}
+"} 
+[2024-05-01 12:00:06] local.EMERGENCY: Unable to create configured logger. Using emergency logger. {"exception":"[object] (InvalidArgumentException(code: 0): Log [missing] is not defined. at /var/www/app/vendor/laravel/framework/src/Illuminate/Log/LogManager.php:229)
+[stacktrace]
+#0 {main}
+"} 
+[2024-05-01 12:00:07] local.ALERT: Disk usage at 95% 
+[2024-05-01 12:00:08] local.NOTICE: Response payload {"data":{"ok":true,"emoji":"✓ ü"}}
+[2024-05-01 12:00:09] local.ERROR: Truncated context {"exception":"[object] (ErrorException(code: 0): Undefined variable $x at /var/www/app/routes/web.php:5)
+[stacktrace]
+#0 /var/www/app/routes/web.php(5): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(2, 'Undefined varia...')

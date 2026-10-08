@@ -1,0 +1,6 @@
+[01-May-2024 12:00:00] NOTICE: fpm is running, pid 1
+[01-May-2024 12:00:00] NOTICE: ready to handle connections
+[01-May-2024 12:05:00] WARNING: [pool www] server reached pm.max_children setting (5), consider raising it
+[01-May-2024 12:06:00] WARNING: [pool www] child 42 said into stderr: "PHP Warning:  Undefined array key "id" in /var/www/app.php on line 9"
+[01-May-2024 12:07:00] ERROR: unable to bind listening socket for address '/run/php/php-fpm.sock': Address already in use (98)
+[01-May-2024 12:07:01] ALERT: [pool www] child 43 exited on signal 11 (SIGSEGV) after 1.5 seconds from start

@@ -1,0 +1,58 @@
+appId: dev.tinkerbox.app
+productName: Tinkerbox
+directories:
+  buildResources: build
+files:
+  - '!**/.vscode/*'
+  - '!src/*'
+  - '!tests/*'
+  - '!electron.vite.config.{js,ts,mjs,cjs}'
+  - '!{.eslintignore,.eslintrc.cjs,.prettierignore,.prettierrc.yaml,dev-app-update.yml,CHANGELOG.md,README.md}'
+  - '!{tsconfig.json,tsconfig.node.json,tsconfig.web.json,vitest.config.ts}'
+  - '!*.tsbuildinfo'
+  - '!{docs,scripts,.kilo}{,/**/*}'
+  # The PHP runner ships as an extra resource (<Resources>/php), not inside the app archive.
+  - '!resources/php{,/**/*}'
+  # The bundled Laravel Sandbox ships as an extra resource (below), not inside the app archive.
+  - '!resources/sandbox{,/**/*}'
+extraResources:
+  - from: resources/php
+    to: php
+  # The MIT license text the About page refers to (Resources/LICENSE).
+  - from: LICENSE
+    to: LICENSE
+  # Prepared by `npm run prepare:sandbox` (optional; skipped with a warning when missing). Found at
+  # <resources>/sandbox by src/main/sandbox/index.ts and copied to <userData>/sandbox on first use.
+  - from: resources/sandbox
+    to: sandbox
+asarUnpack:
+  - resources/**
+# tinkerbox://open?cwd=… deep links (CLI helper, src/main/deeplinks.ts): CFBundleURLTypes on macOS and an
+# x-scheme-handler MimeType in the Linux .desktop file. Windows registers at run time (setAsDefaultProtocolClient).
+protocols:
+  - name: Tinkerbox
+    schemes:
+      - tinkerbox
+mac:
+  icon: build/icon.icns
+  # Ad-hoc signature so the app launches on Apple Silicon without an Apple Developer ID.
+  # For public releases, replace with your "Developer ID Application" identity and enable
+  # hardenedRuntime + notarization.
+  identity: '-'
+  hardenedRuntime: false
+  category: public.app-category.developer-tools
+  target:
+    - dmg
+    - zip
+dmg:
+  artifactName: ${name}-${version}.${ext}
+win:
+  icon: build/icon.png
+  target: nsis
+linux:
+  icon: build/icon.png
+  target:
+    - AppImage
+    - deb
+  category: Development
+npmRebuild: false

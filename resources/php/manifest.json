@@ -1,0 +1,26 @@
+{
+  "comment": "Runner sources in declaration order (parents before children). Concatenated by src/main/execution/bundle.ts. Every file contains only braced namespace blocks.",
+  "files": [
+    "src/Drivers/Support.php",
+    "src/Drivers/Driver.php",
+    "src/Panels/Panel.php",
+    "src/Drivers/LaravelDrivers.php",
+    "src/Drivers/SymfonyDrivers.php",
+    "src/Drivers/WordPressDrivers.php",
+    "src/Drivers/CmsDrivers.php",
+    "src/Drivers/FrameworkDrivers.php",
+    "src/DriverRegistry.php",
+    "src/ClassAliasLoader.php",
+    "src/Dumper.php",
+    "src/ExceptionFormatter.php",
+    "src/Capture.php",
+    "src/Magic.php",
+    "src/CodeTransformer.php",
+    "src/Introspector.php",
+    "src/LogReader.php",
+    "src/Panels.php",
+    "src/ProjectSnippets.php",
+    "src/Runner.php",
+    "src/helpers.php"
+  ]
+}

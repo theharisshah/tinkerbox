@@ -1,0 +1,13 @@
+{
+    "name": "acme/greeter",
+    "description": "Tinkerbox fixture: a plain Composer library (no framework).",
+    "type": "library",
+    "require": {
+        "php": ">=7.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Acme\\Greeter\\": "src/"
+        }
+    }
+}

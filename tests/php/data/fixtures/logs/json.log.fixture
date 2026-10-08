@@ -1,0 +1,4 @@
+{"message":"Order shipped","context":{"order":42},"level":200,"level_name":"INFO","channel":"production","datetime":"2024-05-01T12:00:00.000000+00:00","extra":{}}
+{"message":"Payment failed","context":{"exception":{"class":"RuntimeException","message":"Card declined","code":0,"file":"/app/Pay.php:10","trace":["/app/Checkout.php:20","/app/index.php:5"]}},"level":400,"level_name":"ERROR","channel":"production","datetime":"2024-05-01T12:00:01.000000+00:00","extra":{"uid":"x1"}}
+{"msg":"numeric level only","level":550,"time":"2024-05-01T12:00:02Z"}
+not json at all

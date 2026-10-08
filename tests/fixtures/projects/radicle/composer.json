@@ -1,0 +1,9 @@
+{
+    "name": "roots/radicle",
+    "type": "project",
+    "require": {
+        "php": ">=8.2",
+        "roots/acorn": "^4.3",
+        "roots/wordpress": "^6.6"
+    }
+}

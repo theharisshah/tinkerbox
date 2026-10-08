@@ -1,0 +1,15 @@
+{
+    "name": "drupal/recommended-project",
+    "type": "project",
+    "require": {
+        "composer/installers": "^2.0",
+        "drupal/core-recommended": "^11.0"
+    },
+    "extra": {
+        "drupal-scaffold": {
+            "locations": {
+                "web-root": "web/"
+            }
+        }
+    }
+}

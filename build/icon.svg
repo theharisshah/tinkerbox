@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <defs>
+    <linearGradient id="bg" x1="0.15" y1="0.05" x2="0.85" y2="0.95">
+      <stop offset="0" stop-color="#a78bfa"/>
+      <stop offset="0.45" stop-color="#7c3aed"/>
+      <stop offset="1" stop-color="#3b2a9e"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.3" r="0.55">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.28"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="spark" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#fff7d6" stop-opacity="0.95"/>
+      <stop offset="0.45" stop-color="#fde68a" stop-opacity="0.45"/>
+      <stop offset="1" stop-color="#fde68a" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#1e1065" flood-opacity="0.28"/>
+    </filter>
+  </defs>
+  <!-- macOS icon grid: 824×824 squircle centred on the 1024 canvas -->
+  <g filter="url(#shadow)">
+    <rect x="100" y="100" width="824" height="824" rx="186" fill="url(#bg)"/>
+  </g>
+  <rect x="100" y="100" width="824" height="824" rx="186" fill="url(#glow)"/>
+  <rect x="101.5" y="101.5" width="821" height="821" rx="184.5" fill="none" stroke="#ffffff" stroke-opacity="0.18" stroke-width="3"/>
+
+  <!-- glow behind the spark -->
+  <circle cx="512" cy="372" r="190" fill="url(#spark)"/>
+
+  <!-- open box (isometric) -->
+  <g stroke="#ffffff" stroke-linejoin="round" stroke-linecap="round">
+    <!-- back flaps, opened up and outwards -->
+    <path d="M332 520 L512 424 L446 344 L266 440 Z" fill="#ffffff" fill-opacity="0.16" stroke-width="20" stroke-opacity="0.75"/>
+    <path d="M512 424 L692 520 L758 440 L578 344 Z" fill="#ffffff" fill-opacity="0.08" stroke-width="20" stroke-opacity="0.75"/>
+    <!-- inside of the box (opening) -->
+    <path d="M332 520 L512 424 L692 520 L512 616 Z" fill="#1e1065" fill-opacity="0.55" stroke-width="0"/>
+    <!-- left & right faces -->
+    <path d="M332 520 L512 616 L512 812 L332 716 Z" fill="#ffffff" fill-opacity="0.30" stroke-width="26"/>
+    <path d="M692 520 L512 616 L512 812 L692 716 Z" fill="#ffffff" fill-opacity="0.16" stroke-width="26"/>
+  </g>
+
+  <!-- spark rising out of the box -->
+  <path d="M512 214 C522 292 538 318 610 334 C538 350 522 376 512 454 C502 376 486 350 414 334 C486 318 502 292 512 214 Z" fill="#fff7d6"/>
+  <path d="M642 222 C646 250 652 258 678 264 C652 270 646 278 642 306 C638 278 632 270 606 264 C632 258 638 250 642 222 Z" fill="#fde68a"/>
+  <path d="M388 256 C391 276 395 282 414 286 C395 290 391 296 388 316 C385 296 381 290 362 286 C381 282 385 276 388 256 Z" fill="#fde68a" fill-opacity="0.85"/>
+</svg>

@@ -1,0 +1,9 @@
+[Wed May 01 12:00:00.123456 2024] [php:error] [pid 4321] [client 10.0.0.1:52344] PHP Fatal error:  Uncaught Error: Call to undefined function foo() in /var/www/html/index.php:3
+Stack trace:
+#0 {main}
+  thrown in /var/www/html/index.php on line 3
+[Wed May 01 12:00:01.000001 2024] [core:notice] [pid 1:tid 140] AH00094: Command line: '/usr/sbin/apache2'
+[Wed May 1 12:00:02 2024] [warn] [client 10.0.0.2] mod_fcgid: stderr: PHP Warning:  foo
+[Thu May 02 08:05:09.654321 2024] [ssl:warn] [pid 77] AH01909: server certificate does NOT include an ID which matches the server name
+[Thu May 02 08:05:10.000000 2024] [authz_core:error] [pid 78] [client 10.0.0.3:1111] AH01630: client denied by server configuration: /var/www/html/.env
+[Thu May 02 08:05:11.000000 2024] [core:trace3] [pid 78] request.c(311): request phase

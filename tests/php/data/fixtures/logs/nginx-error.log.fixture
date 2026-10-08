@@ -1,0 +1,5 @@
+2024/05/01 12:00:00 [error] 1234#0: *5 FastCGI sent in stderr: "PHP message: PHP Warning:  Undefined variable $x in /var/www/index.php on line 3" while reading response header from upstream, client: 127.0.0.1, server: app.test, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/run/php/php8.3-fpm.sock:", host: "app.test"
+2024/05/01 12:00:01 [warn] 1234#0: *6 an upstream response is buffered to a temporary file /var/cache/nginx/fastcgi_temp/1/00/0000000001 while reading upstream
+2024/05/01 12:00:02 [crit] 1234#0: *7 connect() to unix:/run/php/php8.3-fpm.sock failed (2: No such file or directory)
+2024/05/01 12:00:03 [notice] 1#1: signal process started
+2024/05/01 12:00:04 [emerg] 1#1: bind() to 0.0.0.0:80 failed (98: Address already in use)

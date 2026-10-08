@@ -1,0 +1,14 @@
+{
+    "name": "symfony/skeleton",
+    "type": "project",
+    "require": {
+        "php": ">=8.2",
+        "symfony/dotenv": "7.1.*",
+        "symfony/framework-bundle": "7.1.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    }
+}

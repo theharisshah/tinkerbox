@@ -1,0 +1,2 @@
+[2024-05-01 10:00:00] local.INFO: Worker started
+[2024-05-01 10:00:05] local.ERROR: Order 9 could not be charged {"order":9}

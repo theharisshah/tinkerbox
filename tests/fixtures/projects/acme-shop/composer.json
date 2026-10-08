@@ -1,0 +1,14 @@
+{
+    "name": "acme/shop",
+    "description": "Tinkerbox fixture: a Laravel-looking project booted by its own project driver (.tinkerbox/drivers).",
+    "type": "project",
+    "require": {
+        "php": ">=7.4",
+        "laravel/framework": "^12.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Acme\\Shop\\": "src/"
+        }
+    }
+}

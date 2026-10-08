@@ -1,0 +1,4 @@
+{
+  "comment": "Protocol-compliant fixture runner for the execution tests (independent of the real runner in resources/php).",
+  "files": ["src/Node.php", "src/Runner.php"]
+}

@@ -1,0 +1,7 @@
+{
+    "name": "getkirby/starterkit",
+    "type": "project",
+    "require": {
+        "getkirby/cms": "^4.0"
+    }
+}

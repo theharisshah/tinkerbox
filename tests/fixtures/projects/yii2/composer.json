@@ -1,0 +1,8 @@
+{
+    "name": "yiisoft/yii2-app-basic",
+    "type": "project",
+    "require": {
+        "php": ">=7.4.0",
+        "yiisoft/yii2": "~2.0.45"
+    }
+}

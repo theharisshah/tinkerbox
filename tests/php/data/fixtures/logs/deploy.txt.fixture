@@ -1,0 +1,6 @@
+Starting deploy
+Warning: low disk space
+ERROR could not connect to redis
+
+Deploy finished
+debug: cache hit ratio 0.93

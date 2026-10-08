@@ -1,0 +1,8 @@
+[01-May-2024 12:00:00 UTC] PHP Warning:  Undefined variable $user in /var/www/app/index.php on line 12
+[01-May-2024 12:00:01 UTC] PHP Deprecated:  Creation of dynamic property Foo::$bar is deprecated in /var/www/app/Foo.php on line 5
+[01-May-2024 12:00:02 Europe/Berlin] PHP Fatal error:  Uncaught Exception: boom in /var/www/app/run.php:3
+Stack trace:
+#0 /var/www/app/index.php(4): run()
+#1 {main}
+  thrown in /var/www/app/run.php on line 3
+[01-May-2024 12:00:03 UTC] PHP Parse error:  syntax error, unexpected token "}" in /var/www/app/broken.php on line 7

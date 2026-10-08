@@ -1,0 +1,9 @@
+{
+    "name": "october/october",
+    "type": "project",
+    "require": {
+        "php": "^8.0",
+        "october/rain": "^3.0",
+        "october/all": "^3.0"
+    }
+}

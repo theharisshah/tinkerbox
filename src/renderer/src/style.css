@@ -1,0 +1,263 @@
+@import 'tailwindcss';
+
+/*
+ * Design tokens. Every color comes from the active theme (CSS variables `--tw-*` written on :root by
+ * src/themes/index.ts → applyTheme). Utilities: bg-app, bg-app-alt, bg-surface, border-line, text-fg, text-muted,
+ * bg-accent, text-on-accent, bg-accent-soft, bg-hover, bg-active, text-danger/warning/success, bg-sidebar,
+ * bg-titlebar, bg-editor, bg-input, bg-overlay, text-code-* … (opacity modifiers work: bg-accent/10).
+ */
+@theme inline {
+  --color-app: var(--tw-bg);
+  --color-app-alt: var(--tw-bg-alt);
+  --color-surface: var(--tw-surface);
+  --color-line: var(--tw-border);
+  --color-fg: var(--tw-text);
+  --color-muted: var(--tw-text-muted);
+  --color-accent: var(--tw-accent);
+  --color-on-accent: var(--tw-accent-fg);
+  --color-accent-soft: var(--tw-accent-soft);
+  --color-hover: var(--tw-hover);
+  --color-active: var(--tw-active);
+  --color-danger: var(--tw-danger);
+  --color-warning: var(--tw-warning);
+  --color-success: var(--tw-success);
+  --color-sidebar: var(--tw-sidebar-bg);
+  --color-titlebar: var(--tw-titlebar-bg);
+  --color-scrollbar: var(--tw-scrollbar);
+  --color-editor: var(--tw-editor-bg);
+  --color-input: var(--tw-input-bg);
+  --color-overlay: var(--tw-overlay);
+  --color-selection: var(--tw-selection);
+  --color-code-string: var(--tw-code-string);
+  --color-code-number: var(--tw-code-number);
+  --color-code-keyword: var(--tw-code-keyword);
+  --color-code-class: var(--tw-code-class);
+  --color-code-property: var(--tw-code-property);
+  --color-code-comment: var(--tw-code-comment);
+  --color-code-null: var(--tw-code-null);
+  --color-code-bool: var(--tw-code-bool);
+  --color-code-key: var(--tw-code-key);
+  --color-code-meta: var(--tw-code-meta);
+
+  --font-sans: 'Inter var', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --font-mono: 'Fira Code', 'JetBrains Mono', ui-monospace, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+@custom-variant dark (&:where([data-dark='true'], [data-dark='true'] *));
+
+/* Fallback palette (Tinkerbox) until the theme module applies the real one. */
+:root {
+  --tw-bg: #f3f0fb;
+  --tw-bg-alt: #efebf9;
+  --tw-surface: #ffffff;
+  --tw-border: #e2dcf2;
+  --tw-text: #2b2340;
+  --tw-text-muted: #7b7296;
+  --tw-accent: #7c3aed;
+  --tw-accent-fg: #ffffff;
+  --tw-accent-soft: #efe7fe;
+  --tw-hover: #e8e3f6;
+  --tw-active: #e3d8fc;
+  --tw-danger: #dc2626;
+  --tw-warning: #d97706;
+  --tw-success: #16a34a;
+  --tw-sidebar-bg: #f3f0fb;
+  --tw-titlebar-bg: #f3f0fb;
+  --tw-scrollbar: #cfc7e6;
+  --tw-editor-bg: #ffffff;
+  --tw-input-bg: #ffffff;
+  --tw-overlay: #1f183252;
+  --tw-selection: #ddd0fb;
+  --tw-code-string: #0f7b55;
+  --tw-code-number: #c2410c;
+  --tw-code-keyword: #7c3aed;
+  --tw-code-class: #0b7285;
+  --tw-code-property: #8f2a8f;
+  --tw-code-comment: #9890b0;
+  --tw-code-null: #b45309;
+  --tw-code-bool: #b45309;
+  --tw-code-key: #8f2a8f;
+  --tw-code-meta: #7b7296;
+}
+
+@layer base {
+  html,
+  body,
+  #app {
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+  }
+
+  html {
+    background: var(--tw-bg);
+    color: var(--tw-text);
+    font-family: var(--font-sans);
+    font-size: 14px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    user-select: none;
+    -webkit-user-select: none;
+    cursor: default;
+  }
+
+  ::selection {
+    background: var(--tw-selection);
+  }
+
+  input,
+  textarea,
+  select,
+  [contenteditable='true'],
+  .selectable {
+    user-select: text;
+    -webkit-user-select: text;
+  }
+
+  button,
+  [role='button'] {
+    cursor: default;
+  }
+
+  :focus-visible {
+    outline: 2px solid color-mix(in srgb, var(--tw-accent) 70%, transparent);
+    outline-offset: 1px;
+  }
+
+  input:focus-visible,
+  textarea:focus-visible,
+  select:focus-visible {
+    outline: none;
+  }
+
+  kbd {
+    font-family: var(--font-sans);
+  }
+
+  /* Thin themed scrollbars. */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: var(--tw-scrollbar) transparent;
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--tw-scrollbar);
+    border-radius: 999px;
+    border: 3px solid transparent;
+    background-clip: content-box;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: var(--tw-text-muted);
+  }
+
+  ::-webkit-scrollbar-corner {
+    background: transparent;
+  }
+}
+
+@layer utilities {
+  /* Electron window dragging (title bar) */
+  .drag-region {
+    -webkit-app-region: drag;
+    app-region: drag;
+  }
+
+  .no-drag {
+    -webkit-app-region: no-drag;
+    app-region: no-drag;
+  }
+
+  .scrollbar-none {
+    scrollbar-width: none;
+  }
+
+  .scrollbar-none::-webkit-scrollbar {
+    display: none;
+  }
+
+  .tabular {
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* Transitions shared by modals, popovers, toasts. */
+.tw-fade-enter-active,
+.tw-fade-leave-active {
+  transition: opacity 140ms ease;
+}
+
+.tw-fade-enter-from,
+.tw-fade-leave-to {
+  opacity: 0;
+}
+
+.tw-pop-enter-active,
+.tw-pop-leave-active {
+  transition:
+    opacity 140ms ease,
+    transform 160ms cubic-bezier(0.2, 0.9, 0.3, 1.2);
+}
+
+.tw-pop-enter-from,
+.tw-pop-leave-to {
+  opacity: 0;
+  transform: translateY(-4px) scale(0.98);
+}
+
+.tw-toast-enter-active {
+  transition:
+    opacity 180ms ease,
+    transform 220ms cubic-bezier(0.2, 0.9, 0.3, 1.1);
+}
+
+.tw-toast-leave-active {
+  transition:
+    opacity 160ms ease,
+    transform 160ms ease;
+}
+
+.tw-toast-enter-from {
+  opacity: 0;
+  transform: translateX(16px);
+}
+
+.tw-toast-leave-to {
+  opacity: 0;
+  transform: translateX(16px);
+}
+
+.tw-toast-move {
+  transition: transform 200ms ease;
+}
+
+@keyframes tw-toast-progress {
+  from {
+    transform: scaleX(1);
+  }
+  to {
+    transform: scaleX(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

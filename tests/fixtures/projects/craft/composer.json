@@ -1,0 +1,8 @@
+{
+    "name": "craftcms/craft",
+    "type": "project",
+    "require": {
+        "craftcms/cms": "^5.0",
+        "vlucas/phpdotenv": "^5.4.0"
+    }
+}

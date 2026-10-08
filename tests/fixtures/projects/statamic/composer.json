@@ -1,0 +1,9 @@
+{
+    "name": "statamic/statamic",
+    "type": "project",
+    "require": {
+        "php": "^8.2",
+        "laravel/framework": "^11.0",
+        "statamic/cms": "^5.0"
+    }
+}

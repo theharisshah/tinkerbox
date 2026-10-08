@@ -1,0 +1,32 @@
+# Dependencies (any depth)
+node_modules/
+
+# Build output
+out/
+dist/
+*.tsbuildinfo
+
+# Bundled Laravel Sandbox (created by `npm run prepare:sandbox`)
+resources/sandbox/
+
+# Test artifacts
+tests/e2e/screenshots/
+tests/php/tmp_review/
+coverage/
+
+# Logs, caches, local env
+*.log
+.env
+.env.*
+# …except framework test fixtures that need theirs
+!tests/fixtures/**/.env
+.vite/
+.cache/
+
+# OS / editor files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+.kilo/
+*.swp

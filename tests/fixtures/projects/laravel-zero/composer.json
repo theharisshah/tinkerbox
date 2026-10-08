@@ -1,0 +1,11 @@
+{
+    "name": "laravel-zero/laravel-zero",
+    "type": "project",
+    "require": {
+        "php": "^8.2",
+        "laravel-zero/framework": "^11.0"
+    },
+    "bin": [
+        "application"
+    ]
+}
