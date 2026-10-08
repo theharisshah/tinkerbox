@@ -1,5 +1,15 @@
 # Tinkerbox
 
+[![Latest release](https://img.shields.io/github/v/release/theharisshah/tinkerbox)](https://github.com/theharisshah/tinkerbox/releases/latest)
+[![Downloads](https://img.shields.io/github/downloads/theharisshah/tinkerbox/total)](https://github.com/theharisshah/tinkerbox/releases)
+[![License: MIT](https://img.shields.io/github/license/theharisshah/tinkerbox)](LICENSE)
+![macOS](https://img.shields.io/badge/platform-macOS-lightgrey?logo=apple)
+![PHP 7.4+](https://img.shields.io/badge/PHP-7.4%2B-777BB4?logo=php&logoColor=white)
+![Laravel](https://img.shields.io/badge/Laravel-ready-FF2D20?logo=laravel&logoColor=white)
+![Electron](https://img.shields.io/badge/Electron-44-47848F?logo=electron&logoColor=white)
+![Vue 3](https://img.shields.io/badge/Vue-3-4FC08D?logo=vuedotjs&logoColor=white)
+[![Stars](https://img.shields.io/github/stars/theharisshah/tinkerbox?style=social)](https://github.com/theharisshah/tinkerbox/stargazers)
+
 Tinkerbox is an independent, open-source desktop scratchpad for PHP and Laravel. Write a few lines in the editor,
 press ⌘R / Ctrl+R, and the code runs inside your project with its framework booted, the way `php artisan tinker`
 would run it. The value of the last expression, every dump, the SQL that ran and any exception show up next to the
