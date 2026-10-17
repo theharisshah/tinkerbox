@@ -10,15 +10,17 @@ const props = withDefaults(
   { min: undefined, max: undefined, step: 1, integer: false, suffix: undefined, width: '84px', disabled: false, ariaLabel: undefined }
 )
 const model = defineModel<number>({ required: true })
-const draft = ref(String(model.value))
+// v-model on a type="number" input casts edits to numbers, so the draft is a string only until the first keystroke.
+const draft = ref<string | number>(String(model.value))
 
 watch(model, (value) => {
   draft.value = String(value)
 })
 
 function commit(): void {
-  let value = Number(draft.value.replace(',', '.'))
-  if (draft.value.trim() === '' || !Number.isFinite(value)) {
+  const raw = String(draft.value).trim()
+  let value = Number(raw.replace(',', '.'))
+  if (raw === '' || !Number.isFinite(value)) {
     draft.value = String(model.value)
     return
   }
