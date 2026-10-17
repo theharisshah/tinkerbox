@@ -118,7 +118,7 @@ Laravel Sandbox → Install).
 
 ```sh
 npm run dist:mac
-open dist/tinkerbox-0.1.0.dmg   # then drag Tinkerbox into Applications
+open dist/tinkerbox-0.1.1.dmg   # then drag Tinkerbox into Applications
 ```
 
 Local builds are ad-hoc signed (no Apple Developer ID needed), so they open normally on the Mac that built them. If
@@ -136,15 +136,15 @@ runtime. The installed app is called Tinkerbox everywhere. Regenerate the icons 
 
 ```sh
 npm run dist:linux
-sudo apt install ./dist/tinkerbox_0.1.0_amd64.deb   # Debian, Ubuntu and derivatives
+sudo apt install ./dist/tinkerbox_0.1.1_amd64.deb   # Debian, Ubuntu and derivatives
 ```
 
 The `.deb` puts the app in `/opt/Tinkerbox`, adds a Tinkerbox entry to the application menu and registers the
 `tinkerbox://` link handler. On other distributions, run the AppImage instead:
 
 ```sh
-chmod +x dist/Tinkerbox-0.1.0.AppImage
-./dist/Tinkerbox-0.1.0.AppImage
+chmod +x dist/Tinkerbox-0.1.1.AppImage
+./dist/Tinkerbox-0.1.1.AppImage
 ```
 
 AppImages need FUSE 2 (`libfuse2`, called `libfuse2t64` on Ubuntu 24.04 and later).

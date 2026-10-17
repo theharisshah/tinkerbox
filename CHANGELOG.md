@@ -1,5 +1,16 @@
 # Changelog
 
+## 0.1.1
+
+### Fixed
+- Number settings (font sizes, line height, tab size, auto-run delay, output limits, timeout and history limit)
+  can be changed again. Editing one showed "draft.value.replace is not a function" and the value was not saved
+  ([#2](https://github.com/theharisshah/tinkerbox/issues/2)).
+
+### Added
+- Linux builds: an AppImage and a `.deb` package (`npm run dist:linux`). Thanks to
+  [@oddvalue](https://github.com/oddvalue) ([#1](https://github.com/theharisshah/tinkerbox/pull/1)).
+
 ## 0.1.0 — First release
 
 ### Running code
