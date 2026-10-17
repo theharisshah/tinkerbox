@@ -107,6 +107,7 @@ Packaging:
 ```sh
 npm run dist             # type-check, build and package for the current platform (electron-builder)
 npm run dist:mac         # macOS packages (dmg + zip)
+npm run dist:linux       # Linux packages (AppImage + deb)
 npm run prepare:sandbox  # optional: bundle a ready-made Laravel Sandbox into the package
 ```
 
@@ -130,6 +131,23 @@ runtime. The installed app is called Tinkerbox everywhere. Regenerate the icons 
 
 **Help → Install Command Line Tool…** adds a `tinkerbox` command, so `tinkerbox .` opens the current folder and
 `tinkerbox file.php` opens a file in the running app.
+
+### Installing the app on Linux
+
+```sh
+npm run dist:linux
+sudo apt install ./dist/tinkerbox_0.1.0_amd64.deb   # Debian, Ubuntu and derivatives
+```
+
+The `.deb` puts the app in `/opt/Tinkerbox`, adds a Tinkerbox entry to the application menu and registers the
+`tinkerbox://` link handler. On other distributions, run the AppImage instead:
+
+```sh
+chmod +x dist/Tinkerbox-0.1.0.AppImage
+./dist/Tinkerbox-0.1.0.AppImage
+```
+
+AppImages need FUSE 2 (`libfuse2`, called `libfuse2t64` on Ubuntu 24.04 and later).
 
 ## Usage tips
 

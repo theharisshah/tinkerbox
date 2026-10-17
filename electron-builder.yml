@@ -55,4 +55,11 @@ linux:
     - AppImage
     - deb
   category: Development
+  # Name the .desktop file after desktopName in package.json (tinkerbox.desktop). Electron uses the same value
+  # as the Wayland app_id / X11 WM_CLASS, so the running window is grouped with the launcher icon.
+  syncDesktopName: true
+deb:
+  # Required for .deb packages. The Homepage field comes from `homepage` in package.json.
+  maintainer: Haris Shah <shahharis383@gmail.com>
+  priority: optional
 npmRebuild: false
